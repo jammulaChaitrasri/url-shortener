@@ -1,0 +1,73 @@
+.registerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.registerCard {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  min-width: 320px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registerTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #ff8800;
+  letter-spacing: 1px;
+}
+
+.inputField {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f7faff;
+  transition: border 0.2s;
+}
+.inputField:focus {
+  border: 1.5px solid #ff8800;
+  outline: none;
+}
+
+.registerButton {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(90deg, #ff8800 60%, #ffb74d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 0.5rem;
+}
+.registerButton:hover {
+  background: linear-gradient(90deg, #ff6f00 60%, #ff8800 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.errorMsg {
+  color: #e53935;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+.successMsg {
+  color: #43a047;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-align: center;
+} 
