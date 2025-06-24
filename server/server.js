@@ -18,7 +18,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 //use cors to allow cross origin resource sharing
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000", "https://url-shortener-1-5ux6.onrender.com"],
     credentials: true,
   })
 );
