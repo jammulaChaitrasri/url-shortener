@@ -24,7 +24,8 @@ app.use(
       "http://localhost:3000",
       "https://url-shortener-1-5ux6.onrender.com",
       "https://url-shortener-five-pink.vercel.app",
-      "https://url-shortener-git-main-nishinishanth88-2890s-projects.vercel.app"
+      "https://url-shortener-git-main-nishinishanth88-2890s-projects.vercel.app",
+      "https://chaitrasrijammulaurl-shortener-zyzi.vercel.app"
     ],
     credentials: true,
   })
