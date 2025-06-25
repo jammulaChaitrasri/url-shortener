@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Form from "../Form/Form";
 import Table from "../Table/Table";
+import { serverBase } from "../../api";
 
 import styles from "./Container.module.css";
 
@@ -45,7 +46,7 @@ export default function Container({ auth, userLinks, setUserLinks }) {
               {userLinks.map(link => (
                 <tr key={link._id}>
                   <td><a href={link.full} target="_blank" rel="noopener noreferrer">{link.full}</a></td>
-                  <td><a href={`http://localhost:5001/${link.short}`} target="_blank" rel="noopener noreferrer">{link.short}</a></td>
+                  <td><a href={`${serverBase}/${link.short}`} target="_blank" rel="noopener noreferrer">{link.short}</a></td>
                   <td>{link.clicks}</td>
                 </tr>
               ))}

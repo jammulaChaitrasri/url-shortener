@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import styles from "./Register.module.css";
+import { serverBase } from "../../api";
 
 export default function Register({ setAuth }) {
   const [username, setUsername] = useState("");
@@ -14,7 +15,7 @@ export default function Register({ setAuth }) {
     setError(null);
     setSuccess(null);
     try {
-      await axios.post("http://localhost:5001/register", { username, email, password });
+      await axios.post(`${serverBase}/register`, { username, email, password });
       setSuccess("Registration successful! Please log in.");
       setUsername("");
       setEmail("");

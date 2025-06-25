@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import styles from "./Login.module.css";
+import { serverBase } from "../../api";
 
 export default function Login({ setAuth }) {
   const [username, setUsername] = useState("");
@@ -11,7 +12,7 @@ export default function Login({ setAuth }) {
     e.preventDefault();
     setError(null);
     try {
-      const res = await axios.post("http://localhost:5001/login", { username, password });
+      const res = await axios.post(`${serverBase}/login`, { username, password });
       localStorage.setItem("token", res.data.token);
       setAuth({ user: res.data.user, token: res.data.token });
     } catch (err) {

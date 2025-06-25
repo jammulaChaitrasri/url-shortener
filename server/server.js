@@ -13,12 +13,19 @@ const app = express();
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-});
+})
+.then(() => console.log("Connected to MongoDB Atlas"))
+.catch((err) => console.error("MongoDB connection error:", err));
 
 //use cors to allow cross origin resource sharing
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://url-shortener-1-5ux6.onrender.com"],
+    origin: [
+      "http://localhost:3000",
+      "https://url-shortener-1-5ux6.onrender.com",
+      "https://url-shortener-five-pink.vercel.app",
+      "https://your-frontend-url.com" // Add your deployed frontend URL here
+    ],
     credentials: true,
   })
 );
@@ -65,7 +72,7 @@ function auth(req, res, next) {
 }
 
 app.get("/", (req, res) => {
-  res.send("Hello There!");
+  res.send("Backend is running!");
 });
 
 // Create short URL (with auth, custom code, analytics)

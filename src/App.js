@@ -5,6 +5,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import styles from "./App.module.css";
 import axios from "axios";
+import { serverBase } from "./api";
 
 function App() {
   const [auth, setAuth] = useState(() => {
@@ -20,7 +21,7 @@ function App() {
   useEffect(() => {
     if (auth && auth.token) {
       axios
-        .get("http://localhost:5001/my-links", {
+        .get(`${serverBase}/my-links`, {
           headers: { Authorization: `Bearer ${auth.token}` },
         })
         .then((res) => setUserLinks(res.data))

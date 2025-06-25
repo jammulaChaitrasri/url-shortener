@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Table.module.css";
+import { serverBase } from "../../api";
 
 const baseUrl = process.env.REACT_APP_SERVERURL || "http://localhost:5001";
 
