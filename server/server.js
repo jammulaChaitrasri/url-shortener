@@ -20,13 +20,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 //use cors to allow cross origin resource sharing
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "https://url-shortener-1-5ux6.onrender.com",
-      "https://url-shortener-five-pink.vercel.app",
-      "https://url-shortener-git-main-nishinishanth88-2890s-projects.vercel.app",
-      "https://chaitrasrijammulaurl-shortener-zyzi.vercel.app"
-    ],
+    origin: (origin, callback) => callback(null, true),
     credentials: true,
   })
 );
