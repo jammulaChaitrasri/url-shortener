@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import styles from "./Register.module.css";
-import { serverBase } from "../../api";
+import { serverBase } from "../api";
 
 export default function Register({ setAuth }) {
   const [username, setUsername] = useState("");

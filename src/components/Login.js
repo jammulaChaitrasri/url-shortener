@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import styles from "./Login.module.css";
-import { serverBase } from "../../api";
+import { serverBase } from "../api";
 
 export default function Login({ setAuth }) {
   const [username, setUsername] = useState("");
